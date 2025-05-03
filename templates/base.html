@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="{{ g.get('lang_code', 'en') }}" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,16 +30,25 @@
             <div class="collapse navbar-collapse" id="navbarMain">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == url_for('index') %}active{% endif %}" href="{{ url_for('index') }}">Home</a>
+                        <a class="nav-link {% if request.path == url_for('index') %}active{% endif %}" href="{{ url_for('index') }}">{{ _('Home') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == url_for('projects') %}active{% endif %}" href="{{ url_for('projects') }}">Projects</a>
+                        <a class="nav-link {% if request.path == url_for('projects') %}active{% endif %}" href="{{ url_for('projects') }}">{{ _('Projects') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == url_for('about') %}active{% endif %}" href="{{ url_for('about') }}">About Us</a>
+                        <a class="nav-link {% if request.path == url_for('about') %}active{% endif %}" href="{{ url_for('about') }}">{{ _('About') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == url_for('contact') %}active{% endif %}" href="{{ url_for('contact') }}">Contact</a>
+                        <a class="nav-link {% if request.path == url_for('contact') %}active{% endif %}" href="{{ url_for('contact') }}">{{ _('Contact') }}</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ _('Language') }}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item {% if session.get('language') == 'en' %}active{% endif %}" href="{{ url_for('set_language', lang_code='en') }}">{{ _('English') }}</a></li>
+                            <li><a class="dropdown-item {% if session.get('language') == 'bg' %}active{% endif %}" href="{{ url_for('set_language', lang_code='bg') }}">{{ _('Bulgarian') }}</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -69,7 +78,7 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <h5>BuildCo Construction</h5>
-                    <p>Building excellence since 1985. We bring your vision to life with quality, innovation, and attention to detail.</p>
+                    <p>{{ _('Building Excellence') }} {{ _('since 1985. We bring your vision to life with quality, innovation, and attention to detail.') }}</p>
                     <div class="social-icons">
                         <a href="#" class="me-2 text-decoration-none"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="me-2 text-decoration-none"><i class="fab fa-twitter"></i></a>
@@ -78,16 +87,16 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <h5>Quick Links</h5>
+                    <h5>{{ _('Quick Links') }}</h5>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url_for('index') }}" class="text-decoration-none">Home</a></li>
-                        <li><a href="{{ url_for('projects') }}" class="text-decoration-none">Projects</a></li>
-                        <li><a href="{{ url_for('about') }}" class="text-decoration-none">About Us</a></li>
-                        <li><a href="{{ url_for('contact') }}" class="text-decoration-none">Contact</a></li>
+                        <li><a href="{{ url_for('index') }}" class="text-decoration-none">{{ _('Home') }}</a></li>
+                        <li><a href="{{ url_for('projects') }}" class="text-decoration-none">{{ _('Projects') }}</a></li>
+                        <li><a href="{{ url_for('about') }}" class="text-decoration-none">{{ _('About') }}</a></li>
+                        <li><a href="{{ url_for('contact') }}" class="text-decoration-none">{{ _('Contact') }}</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5>Contact Information</h5>
+                    <h5>{{ _('Contact Information') }}</h5>
                     <address>
                         <p><i class="fas fa-map-marker-alt me-2"></i> 123 Construction Ave, Suite 400<br>Metropolis, NY 10001</p>
                         <p><i class="fas fa-phone me-2"></i> (555) 123-4567</p>
@@ -98,12 +107,12 @@
             <hr>
             <div class="row">
                 <div class="col-md-6">
-                    <p class="mb-0">&copy; 2023 BuildCo Construction. All rights reserved.</p>
+                    <p class="mb-0">&copy; 2023 BuildCo Construction. {{ _('All Rights Reserved') }}</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <p class="mb-0">
-                        <a href="#" class="text-decoration-none me-3">Privacy Policy</a>
-                        <a href="#" class="text-decoration-none">Terms of Service</a>
+                        <a href="#" class="text-decoration-none me-3">{{ _('Privacy Policy') }}</a>
+                        <a href="#" class="text-decoration-none">{{ _('Terms of Service') }}</a>
                     </p>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import os
 import logging
 
-from flask import Flask, request, session
+from flask import Flask, request, session, g
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
 from flask_babel import Babel
@@ -48,6 +48,10 @@ def get_locale():
     return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
 
 babel = Babel(app, locale_selector=get_locale)
+
+@app.before_request
+def before_request():
+    g.lang_code = session.get('language', request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES']) or 'en')
 
 with app.app_context():
     # Make sure to import the models here or their tables won't be created
