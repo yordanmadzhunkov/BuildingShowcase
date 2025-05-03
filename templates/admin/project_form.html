@@ -1,0 +1,175 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{% if project %}Edit Project{% else %}Add New Project{% endif %}{% endblock %}
+
+{% block admin_content %}
+<div class="card shadow-sm">
+    <div class="card-header">
+        <h4 class="mb-0">{% if project %}Edit Project: {{ project.title }}{% else %}Add New Project{% endif %}</h4>
+    </div>
+    <div class="card-body">
+        <form method="post" action="" novalidate>
+            {{ form.hidden_tag() }}
+            
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    {{ form.title.label(class="form-label") }}
+                    {% if form.title.errors %}
+                        {{ form.title(class="form-control is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.title.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.title(class="form-control") }}
+                    {% endif %}
+                </div>
+                <div class="col-md-6">
+                    {{ form.slug.label(class="form-label") }}
+                    {% if form.slug.errors %}
+                        {{ form.slug(class="form-control is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.slug.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.slug(class="form-control") }}
+                    {% endif %}
+                    <div class="form-text">URL-friendly name (e.g., "office-tower-project")</div>
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                {{ form.description.label(class="form-label") }}
+                {% if form.description.errors %}
+                    {{ form.description(class="form-control is-invalid", rows=5) }}
+                    <div class="invalid-feedback">
+                        {% for error in form.description.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.description(class="form-control", rows=5) }}
+                {% endif %}
+            </div>
+            
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    {{ form.client.label(class="form-label") }}
+                    {% if form.client.errors %}
+                        {{ form.client(class="form-control is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.client.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.client(class="form-control") }}
+                    {% endif %}
+                </div>
+                <div class="col-md-6">
+                    {{ form.location.label(class="form-label") }}
+                    {% if form.location.errors %}
+                        {{ form.location(class="form-control is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.location.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.location(class="form-control") }}
+                    {% endif %}
+                </div>
+            </div>
+            
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    {{ form.completion_date.label(class="form-label") }}
+                    {% if form.completion_date.errors %}
+                        {{ form.completion_date(class="form-control is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.completion_date.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.completion_date(class="form-control") }}
+                    {% endif %}
+                </div>
+                <div class="col-md-4">
+                    {{ form.square_footage.label(class="form-label") }}
+                    {% if form.square_footage.errors %}
+                        {{ form.square_footage(class="form-control is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.square_footage.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.square_footage(class="form-control") }}
+                    {% endif %}
+                </div>
+                <div class="col-md-4">
+                    {{ form.project_type.label(class="form-label") }}
+                    {% if form.project_type.errors %}
+                        {{ form.project_type(class="form-select is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.project_type.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.project_type(class="form-select") }}
+                    {% endif %}
+                </div>
+            </div>
+            
+            <div class="mb-4 form-check">
+                {{ form.featured(class="form-check-input") }}
+                {{ form.featured.label(class="form-check-label") }}
+            </div>
+            
+            <div class="d-flex justify-content-between">
+                <a href="{{ url_for('admin_projects') }}" class="btn btn-outline-secondary">Cancel</a>
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+</div>
+
+{% if project %}
+<div class="mt-4">
+    <div class="card shadow-sm">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Project Images</h4>
+            <a href="{{ url_for('admin_project_images', project_id=project.id) }}" class="btn btn-outline-primary btn-sm">Manage Images</a>
+        </div>
+        <div class="card-body">
+            <div class="row g-3">
+                {% for image in project.images %}
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <img src="{{ image.filename }}" class="card-img-top" alt="{{ project.title }}">
+                        <div class="card-body p-2">
+                            <p class="card-text small text-muted mb-0">{{ image.caption or 'No caption' }}</p>
+                            {% if image.is_primary %}
+                            <span class="badge bg-primary">Primary Image</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="col-12">
+                    <div class="alert alert-warning mb-0">
+                        <i class="bi bi-exclamation-circle me-2"></i> No images have been added to this project yet.
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

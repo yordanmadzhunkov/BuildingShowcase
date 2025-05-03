@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Admin - {{ title }}{% endblock %}
+
+{% block content %}
+<!-- Admin Panel Header -->
+<div class="container pt-4 pb-4">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h1 class="display-5 fw-bold">{{ title }}</h1>
+        </div>
+        <div class="col-md-4 text-md-end d-flex align-items-center justify-content-md-end">
+            {% if current_user.is_authenticated %}
+            <div class="dropdown">
+                <button class="btn btn-outline-primary dropdown-toggle" type="button" id="adminDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle me-1"></i> {{ current_user.username }}
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                    <li><a class="dropdown-item" href="{{ url_for('admin_dashboard') }}">Dashboard</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('admin_projects') }}">Manage Projects</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('admin_messages') }}">Contact Messages</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="{{ url_for('admin_logout') }}">Logout</a></li>
+                </ul>
+            </div>
+            {% else %}
+            <a href="{{ url_for('admin_login') }}" class="btn btn-primary">Login</a>
+            {% endif %}
+        </div>
+    </div>
+    
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    
+    <!-- Main Admin Content -->
+    {% block admin_content %}{% endblock %}
+</div>
+{% endblock %}

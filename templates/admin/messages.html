@@ -1,0 +1,187 @@
+{% extends "admin/base.html" %}
+
+{% block title %}Contact Messages{% endblock %}
+
+{% block admin_content %}
+<div class="mb-4 d-flex justify-content-between align-items-center">
+    <div>
+        <h3>Contact Messages</h3>
+        <p class="text-muted">Messages received from website visitors</p>
+    </div>
+</div>
+
+<!-- Filter Controls -->
+<div class="card mb-4 shadow-sm">
+    <div class="card-body">
+        <form method="get" class="row g-3">
+            <div class="col-md-4">
+                <label for="responded" class="form-label">Status</label>
+                <select name="responded" id="responded" class="form-select">
+                    <option value="">All Messages</option>
+                    <option value="0" {% if request.args.get('responded') == '0' %}selected{% endif %}>Unresponded</option>
+                    <option value="1" {% if request.args.get('responded') == '1' %}selected{% endif %}>Responded</option>
+                </select>
+            </div>
+            <div class="col-md-4 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary me-2">Apply Filter</button>
+                <a href="{{ url_for('admin_messages') }}" class="btn btn-outline-secondary">Reset</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Messages Accordion -->
+<div class="accordion shadow-sm" id="messagesAccordion">
+    {% for message in messages %}
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading{{ message.id }}">
+            <button class="accordion-button {% if not loop.first %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ message.id }}" aria-expanded="{% if loop.first %}true{% else %}false{% endif %}" aria-controls="collapse{{ message.id }}">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-bold">{{ message.subject }}</span>
+                        <span class="ms-3 text-muted">From: {{ message.name }}</span>
+                    </div>
+                    <div class="ms-auto me-3">
+                        <span class="badge {% if message.responded %}bg-success{% else %}bg-warning{% endif %}">
+                            {% if message.responded %}Responded{% else %}New{% endif %}
+                        </span>
+                    </div>
+                    <small class="text-muted">{{ message.created_at.strftime('%Y-%m-%d %H:%M') }}</small>
+                </div>
+            </button>
+        </h2>
+        <div id="collapse{{ message.id }}" class="accordion-collapse collapse {% if loop.first %}show{% endif %}" aria-labelledby="heading{{ message.id }}" data-bs-parent="#messagesAccordion">
+            <div class="accordion-body">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Message Details</h5>
+                        <div class="row mb-2">
+                            <div class="col-md-6">
+                                <p class="mb-1"><strong>From:</strong> {{ message.name }}</p>
+                                <p class="mb-1"><strong>Email:</strong> <a href="mailto:{{ message.email }}">{{ message.email }}</a></p>
+                                {% if message.phone %}
+                                <p class="mb-1"><strong>Phone:</strong> {{ message.phone }}</p>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <p class="mb-1"><strong>Date:</strong> {{ message.created_at.strftime('%Y-%m-%d %H:%M') }}</p>
+                                <p class="mb-1"><strong>Status:</strong> 
+                                    <span class="badge {% if message.responded %}bg-success{% else %}bg-warning{% endif %}">
+                                        {% if message.responded %}Responded{% else %}New{% endif %}
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <h6 class="mb-2">Subject: {{ message.subject }}</h6>
+                        <div class="message-content p-3 bg-light rounded">
+                            {{ message.message|nl2br }}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <a href="mailto:{{ message.email }}?subject=Re: {{ message.subject }}" class="btn btn-primary">
+                            <i class="bi bi-reply me-1"></i> Reply via Email
+                        </a>
+                    </div>
+                    <div>
+                        <form action="{{ url_for('admin_toggle_message_status', message_id=message.id) }}" method="post" class="d-inline">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                            <button type="submit" class="btn {% if message.responded %}btn-outline-warning{% else %}btn-outline-success{% endif %}">
+                                {% if message.responded %}
+                                <i class="bi bi-arrow-counterclockwise me-1"></i> Mark as Unresponded
+                                {% else %}
+                                <i class="bi bi-check-circle me-1"></i> Mark as Responded
+                                {% endif %}
+                            </button>
+                        </form>
+                        <button type="button" class="btn btn-outline-danger ms-2" data-bs-toggle="modal" data-bs-target="#deleteModal{{ message.id }}">
+                            <i class="bi bi-trash me-1"></i> Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deleteModal{{ message.id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ message.id }}" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel{{ message.id }}">Confirm Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this message from {{ message.name }}? This action cannot be undone.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <form action="{{ url_for('admin_delete_message', message_id=message.id) }}" method="post" class="d-inline">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="alert alert-info mb-0">
+        <i class="bi bi-info-circle me-2"></i> No messages found.
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Pagination -->
+{% if pagination and pagination.pages > 1 %}
+<div class="mt-4 d-flex justify-content-center">
+    <nav aria-label="Message navigation">
+        <ul class="pagination">
+            {% if pagination.has_prev %}
+            <li class="page-item">
+                <a class="page-link" href="{{ url_for('admin_messages', page=pagination.prev_num, **request.args) }}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <span class="page-link" aria-hidden="true">&laquo;</span>
+            </li>
+            {% endif %}
+            
+            {% for page in pagination.iter_pages() %}
+                {% if page %}
+                    {% if page != pagination.page %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ url_for('admin_messages', page=page, **request.args) }}">{{ page }}</a>
+                    </li>
+                    {% else %}
+                    <li class="page-item active" aria-current="page">
+                        <span class="page-link">{{ page }}</span>
+                    </li>
+                    {% endif %}
+                {% else %}
+                <li class="page-item disabled">
+                    <span class="page-link">...</span>
+                </li>
+                {% endif %}
+            {% endfor %}
+            
+            {% if pagination.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="{{ url_for('admin_messages', page=pagination.next_num, **request.args) }}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <span class="page-link" aria-hidden="true">&raquo;</span>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+{% endif %}
+{% endblock %}
