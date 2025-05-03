@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ project.title }} - BuildCo Construction{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css">
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Project Header -->
+<section class="py-5 bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}" class="text-light">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ url_for('projects') }}" class="text-light">Projects</a></li>
+                        <li class="breadcrumb-item active text-light" aria-current="page">{{ project.title }}</li>
+                    </ol>
+                </nav>
+                <h1 class="display-4 fw-bold">{{ project.title }}</h1>
+                <p class="lead">{{ project.description }}</p>
+                <div class="d-flex flex-wrap align-items-center mt-4">
+                    <span class="badge bg-primary me-3 mb-2">{{ project.project_type }}</span>
+                    <span class="me-3 mb-2"><i class="fas fa-map-marker-alt me-2"></i>{{ project.location }}</span>
+                    <span class="me-3 mb-2"><i class="far fa-calendar-alt me-2"></i>Completed: {{ project.completion_date.strftime('%B %Y') }}</span>
+                    <span class="mb-2"><i class="fas fa-ruler-combined me-2"></i>{{ "{:,}".format(project.square_footage) }} sq ft</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Gallery -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="mb-4">Project Gallery</h2>
+        <div class="row g-4">
+            {% for image in project.images %}
+                <div class="col-md-4">
+                    <a href="{{ image.filename }}?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" data-lightbox="project-gallery" data-title="{{ image.caption }}" class="gallery-item">
+                        <img src="{{ image.filename }}?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded shadow" alt="{{ image.caption }}">
+                        {% if image.caption %}
+                            <div class="gallery-caption p-2 bg-dark text-white small">{{ image.caption }}</div>
+                        {% endif %}
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Project Details -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Project Overview</h3>
+                        <p class="card-text">{{ project.description }}</p>
+                    </div>
+                </div>
+                
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title">Client Testimonial</h3>
+                        <blockquote class="blockquote">
+                            <p>"BuildCo delivered this project with exceptional attention to detail and quality craftsmanship. We couldn't be happier with the results."</p>
+                            <footer class="blockquote-footer">{{ project.client }}</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Project Specifications</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="fas fa-user me-2"></i>Client</span>
+                                <span class="text-primary">{{ project.client }}</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="fas fa-map-marker-alt me-2"></i>Location</span>
+                                <span class="text-primary">{{ project.location }}</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="far fa-calendar-alt me-2"></i>Completion Date</span>
+                                <span class="text-primary">{{ project.completion_date.strftime('%B %d, %Y') }}</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="fas fa-ruler-combined me-2"></i>Square Footage</span>
+                                <span class="text-primary">{{ "{:,}".format(project.square_footage) }} sq ft</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="fas fa-tag me-2"></i>Project Type</span>
+                                <span class="badge bg-primary">{{ project.project_type }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title">Interested in a Similar Project?</h4>
+                        <p class="card-text">Contact us today to discuss how we can bring your vision to life.</p>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary w-100">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Projects -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="mb-4">Other {{ project.project_type }} Projects</h2>
+        <div class="row g-4">
+            {% set related_projects = [] %}
+            {% for p in (Project.query.filter_by(project_type=project.project_type).filter(Project.id != project.id).limit(3).all()) %}
+                {% set primary_image = p.images|selectattr('is_primary', 'eq', true)|first %}
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm project-card">
+                        <div class="project-image">
+                            <img src="{{ primary_image.filename }}?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="{{ p.title }}">
+                            <div class="project-overlay">
+                                <a href="{{ url_for('project_detail', slug=p.slug) }}" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ p.title }}</h5>
+                            <p class="card-text text-muted">
+                                <i class="fas fa-map-marker-alt me-1"></i> {{ p.location }}
+                            </p>
+                            <p class="card-text">{{ p.description|truncate(80) }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="col-12 text-center py-4">
+                    <p class="text-muted">No related projects found.</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="display-5 fw-bold">Ready to Start Your Project?</h2>
+                <p class="lead mb-0">Let's discuss your construction needs and create something remarkable together.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

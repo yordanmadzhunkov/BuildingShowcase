@@ -1,0 +1,263 @@
+/* General Styles */
+:root {
+    --construction-primary: #FF6B35;   /* Construction orange */
+    --construction-secondary: #2E4057; /* Navy blue */
+    --construction-accent: #FFB563;    /* Light orange */
+    --construction-light: #E6E8E6;     /* Light gray */
+    --construction-dark: #1A1A1A;      /* Dark gray/almost black */
+}
+
+body {
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.lead {
+    font-weight: 300;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    height: 80vh;
+    min-height: 500px;
+    max-height: 800px;
+}
+
+.carousel-inner, .carousel-item {
+    height: 100%;
+}
+
+.carousel-overlay {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.carousel-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Project Cards */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    transition: transform 0.5s ease;
+    height: 240px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Gallery */
+.gallery-item {
+    position: relative;
+    display: block;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Service Icons */
+.service-icon, .value-icon {
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(var(--bs-primary-rgb), 0.1);
+}
+
+/* Team Members */
+.team-member-img img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.team-card {
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--bs-primary);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-number {
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--bs-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Statistics */
+.stat-item {
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+.footer {
+    background: var(--bs-dark);
+}
+
+.social-icons a {
+    color: var(--bs-light);
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--bs-primary);
+}
+
+/* Testimonials */
+.testimonial-item {
+    position: relative;
+}
+
+.testimonial-content {
+    position: relative;
+}
+
+.testimonial-content p {
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-content::before {
+    content: '\201C';
+    font-family: Georgia, serif;
+    font-size: 80px;
+    color: rgba(var(--bs-primary-rgb), 0.1);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: 0;
+}
+
+/* Contact Form */
+.contact-form-wrapper {
+    background: rgba(var(--bs-light-rgb), 0.05);
+}
+
+.contact-icon {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .hero-section {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .display-4 {
+        font-size: calc(1.375rem + 1.5vw);
+    }
+
+    .project-image img {
+        height: 200px;
+    }
+}
