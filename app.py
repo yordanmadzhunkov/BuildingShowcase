@@ -5,6 +5,7 @@ from flask import Flask, request, session, g
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
 from flask_babel import Babel
+from flask_login import LoginManager
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
@@ -48,6 +49,17 @@ def get_locale():
     return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
 
 babel = Babel(app, locale_selector=get_locale)
+
+# Initialize Flask-Login
+login_manager = LoginManager(app)
+login_manager.login_view = 'admin_login'
+login_manager.login_message = 'Please log in to access this page.'
+login_manager.login_message_category = 'info'
+
+@login_manager.user_loader
+def load_user(user_id):
+    from models import User
+    return User.query.get(int(user_id))
 
 @app.before_request
 def before_request():
