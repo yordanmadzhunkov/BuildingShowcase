@@ -1,8 +1,9 @@
-from flask import render_template, request, flash, redirect, url_for, abort
+from flask import render_template, request, flash, redirect, url_for, abort, session
 from werkzeug.exceptions import NotFound
 from app import app, db
 from models import Project, ProjectImage, ContactMessage
 from forms import ContactForm
+from flask_babel import gettext as _
 import logging
 
 # Sample project data for initial setup
@@ -222,6 +223,20 @@ def contact():
             logging.error(f"Error saving contact form: {str(e)}")
     
     return render_template('contact.html', form=form)
+
+@app.route('/language/<lang_code>')
+def set_language(lang_code):
+    """Set the language"""
+    # Check if the language is supported
+    if lang_code in app.config['BABEL_SUPPORTED_LOCALES']:
+        session['language'] = lang_code
+        # Flash a message to confirm the language change
+        if lang_code == 'en':
+            flash('Language changed to English', 'info')
+        elif lang_code == 'bg':
+            flash('Езикът е променен на български', 'info')
+    # Redirect back to the referring page or home page
+    return redirect(request.referrer or url_for('index'))
 
 @app.errorhandler(404)
 def page_not_found(e):

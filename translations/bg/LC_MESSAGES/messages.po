@@ -1,0 +1,137 @@
+# Bulgarian translations for BuildCo Construction Website.
+# Copyright (C) 2025 BuildCo Construction
+# This file is distributed under the same license as the BuildCo Construction website.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-03 04:00+0000\n"
+"PO-Revision-Date: 2025-05-03 04:00+0000\n"
+"Last-Translator: AI Assistant\n"
+"Language-Team: Bulgarian\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Navigation
+msgid "Home"
+msgstr "Начало"
+
+msgid "Projects"
+msgstr "Проекти"
+
+msgid "About"
+msgstr "За нас"
+
+msgid "Contact"
+msgstr "Контакт"
+
+# Homepage
+msgid "Featured Projects"
+msgstr "Избрани проекти"
+
+msgid "Recent Projects"
+msgstr "Скорошни проекти"
+
+msgid "View Project"
+msgstr "Разгледай проект"
+
+msgid "View All Projects"
+msgstr "Всички проекти"
+
+msgid "Building Excellence"
+msgstr "Изграждаме съвършенство"
+
+msgid "Quality Construction Services"
+msgstr "Качествени строителни услуги"
+
+# Project details
+msgid "Project Details"
+msgstr "Детайли за проекта"
+
+msgid "Client"
+msgstr "Клиент"
+
+msgid "Location"
+msgstr "Местоположение"
+
+msgid "Completion Date"
+msgstr "Дата на завършване"
+
+msgid "Square Footage"
+msgstr "Квадратура"
+
+msgid "Project Type"
+msgstr "Тип проект"
+
+# Project gallery
+msgid "All Projects"
+msgstr "Всички проекти"
+
+msgid "Filter by Type"
+msgstr "Филтрирай по тип"
+
+msgid "All Types"
+msgstr "Всички типове"
+
+# About page
+msgid "About Us"
+msgstr "За нас"
+
+msgid "Our Story"
+msgstr "Нашата история"
+
+msgid "Our Team"
+msgstr "Нашият екип"
+
+msgid "Our Values"
+msgstr "Нашите ценности"
+
+# Contact Form
+msgid "Contact Us"
+msgstr "Свържете се с нас"
+
+msgid "Get in Touch"
+msgstr "Свържете се"
+
+msgid "Full Name"
+msgstr "Пълно име"
+
+msgid "Email Address"
+msgstr "Имейл адрес"
+
+msgid "Phone Number"
+msgstr "Телефонен номер"
+
+msgid "Subject"
+msgstr "Тема"
+
+msgid "Message"
+msgstr "Съобщение"
+
+msgid "Send Message"
+msgstr "Изпрати"
+
+# Footer
+msgid "All Rights Reserved"
+msgstr "Всички права запазени"
+
+# Language Selection
+msgid "Language"
+msgstr "Език"
+
+msgid "English"
+msgstr "Английски"
+
+msgid "Bulgarian"
+msgstr "Български"
+
+# Messages
+msgid "Your message has been sent. We will contact you shortly!"
+msgstr "Вашето съобщение беше изпратено. Ще се свържем с вас скоро!"
+
+msgid "An error occurred while sending your message. Please try again."
+msgstr "Възникна грешка при изпращане на съобщението. Моля, опитайте отново."

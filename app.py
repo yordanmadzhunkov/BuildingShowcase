@@ -1,9 +1,10 @@
 import os
 import logging
 
-from flask import Flask
+from flask import Flask, request, session
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
+from flask_babel import Babel
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
@@ -32,6 +33,21 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # Initialize the app with the extension
 db.init_app(app)
+
+# Configure Flask-Babel
+app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'bg']
+app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'translations'
+
+def get_locale():
+    # Check if language is set in the session
+    if 'language' in session:
+        return session['language']
+    # Otherwise try to guess the language from the user accept
+    # header the browser transmits
+    return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
+
+babel = Babel(app, locale_selector=get_locale)
 
 with app.app_context():
     # Make sure to import the models here or their tables won't be created
