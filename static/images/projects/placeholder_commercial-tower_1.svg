@@ -1,0 +1,22 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#2c3e50"/>
+  <rect x="250" y="100" width="300" height="450" fill="#34495e"/>
+  <rect x="280" y="130" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="350" y="130" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="420" y="130" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="280" y="200" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="350" y="200" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="420" y="200" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="280" y="270" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="350" y="270" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="420" y="270" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="280" y="340" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="350" y="340" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="420" y="340" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="280" y="410" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="350" y="410" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="420" y="410" width="50" height="50" fill="#ecf0f1"/>
+  <rect x="330" y="480" width="140" height="70" fill="#3498db"/>
+  <text x="400" y="80" font-family="Arial" font-size="24" text-anchor="middle" fill="white">Commercial Tower</text>
+  <text x="400" y="525" font-family="Arial" font-size="18" text-anchor="middle" fill="white">ENTRANCE</text>
+</svg>
