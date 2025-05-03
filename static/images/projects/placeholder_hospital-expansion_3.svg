@@ -1,0 +1,64 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky background -->
+  <rect width="800" height="600" fill="#3498db"/>
+  <!-- Ground -->
+  <rect x="0" y="400" width="800" height="200" fill="#95a5a6"/>
+  <!-- Existing Hospital -->
+  <rect x="50" y="100" width="400" height="300" fill="#ecf0f1"/>
+  <!-- Windows for existing hospital -->
+  <rect x="80" y="130" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="140" y="130" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="200" y="130" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="260" y="130" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="320" y="130" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="380" y="130" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="80" y="190" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="140" y="190" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="200" y="190" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="260" y="190" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="320" y="190" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="380" y="190" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="80" y="250" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="140" y="250" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="200" y="250" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="260" y="250" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="320" y="250" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="380" y="250" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="80" y="310" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="140" y="310" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="200" y="310" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="260" y="310" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="320" y="310" width="40" height="40" fill="#bdc3c7"/>
+  <rect x="380" y="310" width="40" height="40" fill="#bdc3c7"/>
+  <!-- New Expansion Wing -->
+  <rect x="450" y="150" width="300" height="250" fill="#3498db"/>
+  <!-- Windows for expansion wing -->
+  <rect x="480" y="180" width="40" height="40" fill="#ecf0f1"/>
+  <rect x="540" y="180" width="40" height="40" fill="#ecf0f1"/>
+  <rect x="600" y="180" width="40" height="40" fill="#ecf0f1"/>
+  <rect x="660" y="180" width="40" height="40" fill="#ecf0f1"/>
+  <rect x="480" y="240" width="40" height="40" fill="#ecf0f1"/>
+  <rect x="540" y="240" width="40" height="40" fill="#ecf0f1"/>
+  <rect x="600" y="240" width="40" height="40" fill="#ecf0f1"/>
+  <rect x="660" y="240" width="40" height="40" fill="#ecf0f1"/>
+  <rect x="480" y="300" width="40" height="40" fill="#ecf0f1"/>
+  <rect x="540" y="300" width="40" height="40" fill="#ecf0f1"/>
+  <rect x="600" y="300" width="40" height="40" fill="#ecf0f1"/>
+  <rect x="660" y="300" width="40" height="40" fill="#ecf0f1"/>
+  <!-- Connecting Bridge -->
+  <rect x="400" y="200" width="50" height="60" fill="#7f8c8d"/>
+  <!-- Hospital Entrance -->
+  <rect x="200" y="350" width="100" height="50" fill="#e74c3c"/>
+  <!-- New Wing Entrance -->
+  <rect x="550" y="350" width="100" height="50" fill="#2980b9"/>
+  <!-- Ambulance -->
+  <rect x="100" y="420" width="80" height="30" fill="#f1c40f"/>
+  <rect x="130" y="400" width="50" height="20" fill="#f1c40f"/>
+  <circle cx="115" cy="450" r="10" fill="#34495e"/>
+  <circle cx="165" cy="450" r="10" fill="#34495e"/>
+  <!-- Hospital Cross Symbol -->
+  <rect x="220" y="60" width="60" height="20" fill="#e74c3c"/>
+  <rect x="240" y="40" width="20" height="60" fill="#e74c3c"/>
+  <!-- Title -->
+  <text x="400" y="500" font-family="Arial" font-size="24" text-anchor="middle" fill="white">Hospital Expansion - New Wing</text>
+</svg>

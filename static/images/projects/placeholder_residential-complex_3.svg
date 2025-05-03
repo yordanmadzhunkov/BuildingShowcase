@@ -1,0 +1,79 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky background -->
+  <rect width="800" height="600" fill="#3498db"/>
+  <!-- Ground -->
+  <rect x="0" y="400" width="800" height="200" fill="#27ae60"/>
+  <!-- Residential Buildings -->
+  <rect x="50" y="100" width="200" height="300" fill="#e74c3c"/>
+  <rect x="300" y="150" width="200" height="250" fill="#e67e22"/>
+  <rect x="550" y="120" width="200" height="280" fill="#d35400"/>
+  <!-- Windows for Building 1 -->
+  <rect x="70" y="120" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="120" y="120" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="170" y="120" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="220" y="120" width="30" height="30" fill="#f1c40f"/>
+  <rect x="70" y="170" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="120" y="170" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="170" y="170" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="220" y="170" width="30" height="30" fill="#f1c40f"/>
+  <rect x="70" y="220" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="120" y="220" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="170" y="220" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="220" y="220" width="30" height="30" fill="#f1c40f"/>
+  <rect x="70" y="270" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="120" y="270" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="170" y="270" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="220" y="270" width="30" height="30" fill="#f1c40f"/>
+  <rect x="70" y="320" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="120" y="320" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="170" y="320" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="220" y="320" width="30" height="30" fill="#f1c40f"/>
+  <!-- Windows for Building 2 -->
+  <rect x="320" y="170" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="370" y="170" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="420" y="170" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="470" y="170" width="30" height="30" fill="#f1c40f"/>
+  <rect x="320" y="220" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="370" y="220" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="420" y="220" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="470" y="220" width="30" height="30" fill="#f1c40f"/>
+  <rect x="320" y="270" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="370" y="270" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="420" y="270" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="470" y="270" width="30" height="30" fill="#f1c40f"/>
+  <rect x="320" y="320" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="370" y="320" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="420" y="320" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="470" y="320" width="30" height="30" fill="#f1c40f"/>
+  <!-- Windows for Building 3 -->
+  <rect x="570" y="140" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="620" y="140" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="670" y="140" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="720" y="140" width="30" height="30" fill="#f1c40f"/>
+  <rect x="570" y="190" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="620" y="190" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="670" y="190" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="720" y="190" width="30" height="30" fill="#f1c40f"/>
+  <rect x="570" y="240" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="620" y="240" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="670" y="240" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="720" y="240" width="30" height="30" fill="#f1c40f"/>
+  <rect x="570" y="290" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="620" y="290" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="670" y="290" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="720" y="290" width="30" height="30" fill="#f1c40f"/>
+  <rect x="570" y="340" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="620" y="340" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="670" y="340" width="30" height="30" fill="#ecf0f1"/>
+  <rect x="720" y="340" width="30" height="30" fill="#f1c40f"/>
+  <!-- Trees -->
+  <circle cx="250" cy="430" r="30" fill="#27ae60"/>
+  <circle cx="500" cy="450" r="40" fill="#27ae60"/>
+  <circle cx="150" cy="450" r="20" fill="#27ae60"/>
+  <circle cx="650" cy="430" r="30" fill="#27ae60"/>
+  <circle cx="750" cy="450" r="40" fill="#27ae60"/>
+  <!-- Sun -->
+  <circle cx="100" cy="80" r="40" fill="#f39c12"/>
+  <!-- Title -->
+  <text x="400" y="550" font-family="Arial" font-size="24" text-anchor="middle" fill="white">Residential Complex - Community View</text>
+</svg>

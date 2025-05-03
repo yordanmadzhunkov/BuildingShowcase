@@ -1,0 +1,35 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Interior of a luxury apartment -->
+  <rect width="800" height="600" fill="#2c3e50"/>
+  <!-- Floor -->
+  <rect x="0" y="450" width="800" height="150" fill="#8b4513"/>
+  <!-- Left Wall -->
+  <rect x="0" y="0" width="50" height="450" fill="#ecf0f1"/>
+  <!-- Right Wall -->
+  <rect x="750" y="0" width="50" height="450" fill="#ecf0f1"/>
+  <!-- Back Wall -->
+  <rect x="50" y="0" width="700" height="200" fill="#ecf0f1"/>
+  <!-- Large Windows -->
+  <rect x="100" y="50" width="200" height="150" fill="#3498db" opacity="0.7"/>
+  <rect x="500" y="50" width="200" height="150" fill="#3498db" opacity="0.7"/>
+  <!-- Couch -->
+  <rect x="150" y="350" width="250" height="80" fill="#34495e" rx="10" ry="10"/>
+  <rect x="150" y="320" width="250" height="30" fill="#34495e" rx="5" ry="5"/>
+  <!-- Coffee Table -->
+  <rect x="250" y="275" width="150" height="40" rx="5" ry="5" fill="#7f8c8d"/>
+  <!-- Dining Table -->
+  <rect x="550" y="350" width="150" height="80" rx="5" ry="5" fill="#d35400"/>
+  <!-- Chairs -->
+  <rect x="570" y="430" width="30" height="20" fill="#7f8c8d"/>
+  <rect x="650" y="430" width="30" height="20" fill="#7f8c8d"/>
+  <rect x="530" y="380" width="20" height="30" fill="#7f8c8d"/>
+  <rect x="700" y="380" width="20" height="30" fill="#7f8c8d"/>
+  <!-- Plants -->
+  <circle cx="100" cy="300" r="40" fill="#27ae60"/>
+  <circle cx="700" cy="300" r="30" fill="#27ae60"/>
+  <!-- Ceiling Light -->
+  <circle cx="400" cy="100" r="40" fill="#f39c12" opacity="0.3"/>
+  <circle cx="400" cy="100" r="20" fill="#f1c40f" opacity="0.5"/>
+  <!-- Title -->
+  <text x="400" y="550" font-family="Arial" font-size="24" text-anchor="middle" fill="white">Luxury Apartment Interior</text>
+</svg>

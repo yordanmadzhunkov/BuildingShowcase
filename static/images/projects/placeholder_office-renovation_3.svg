@@ -1,0 +1,41 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Office Conference Room -->
+  <rect width="800" height="600" fill="#2c3e50"/>
+  <!-- Floor -->
+  <rect x="0" y="450" width="800" height="150" fill="#34495e"/>
+  <!-- Walls -->
+  <rect x="50" y="50" width="700" height="400" fill="#ecf0f1"/>
+  <!-- Glass wall/windows -->
+  <rect x="100" y="100" width="600" height="200" fill="#3498db" opacity="0.3"/>
+  <line x1="250" y1="100" x2="250" y2="300" stroke="#7f8c8d" stroke-width="2"/>
+  <line x1="400" y1="100" x2="400" y2="300" stroke="#7f8c8d" stroke-width="2"/>
+  <line x1="550" y1="100" x2="550" y2="300" stroke="#7f8c8d" stroke-width="2"/>
+  <!-- Conference table -->
+  <ellipse cx="400" cy="350" rx="200" ry="80" fill="#8b4513"/>
+  <!-- Chairs around table -->
+  <circle cx="200" cy="350" r="20" fill="#2c3e50"/>
+  <circle cx="250" cy="320" r="20" fill="#2c3e50"/>
+  <circle cx="300" cy="300" r="20" fill="#2c3e50"/>
+  <circle cx="350" cy="290" r="20" fill="#2c3e50"/>
+  <circle cx="450" cy="290" r="20" fill="#2c3e50"/>
+  <circle cx="500" cy="300" r="20" fill="#2c3e50"/>
+  <circle cx="550" cy="320" r="20" fill="#2c3e50"/>
+  <circle cx="600" cy="350" r="20" fill="#2c3e50"/>
+  <circle cx="550" cy="380" r="20" fill="#2c3e50"/>
+  <circle cx="500" cy="400" r="20" fill="#2c3e50"/>
+  <circle cx="450" cy="410" r="20" fill="#2c3e50"/>
+  <circle cx="350" cy="410" r="20" fill="#2c3e50"/>
+  <circle cx="300" cy="400" r="20" fill="#2c3e50"/>
+  <circle cx="250" cy="380" r="20" fill="#2c3e50"/>
+  <!-- Projection screen -->
+  <rect x="250" y="120" width="300" height="150" fill="white"/>
+  <!-- Plants in corners -->
+  <circle cx="100" cy="400" r="30" fill="#27ae60"/>
+  <circle cx="700" cy="400" r="30" fill="#27ae60"/>
+  <!-- Ceiling lights -->
+  <circle cx="250" cy="80" r="15" fill="#f1c40f" opacity="0.5"/>
+  <circle cx="400" cy="80" r="15" fill="#f1c40f" opacity="0.5"/>
+  <circle cx="550" cy="80" r="15" fill="#f1c40f" opacity="0.5"/>
+  <!-- Title -->
+  <text x="400" y="500" font-family="Arial" font-size="24" text-anchor="middle" fill="white">Office Renovation - Modern Conference Room</text>
+</svg>
