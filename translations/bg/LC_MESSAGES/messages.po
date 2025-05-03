@@ -180,3 +180,31 @@ msgstr "Вашето съобщение беше изпратено. Ще се �
 
 msgid "An error occurred while sending your message. Please try again."
 msgstr "Възникна грешка при изпращане на съобщението. Моля, опитайте отново."
+
+# Admin Section
+msgid "Admin"
+msgstr "Администратор"
+
+msgid "Admin Login"
+msgstr "Вход за администратор"
+
+msgid "Dashboard"
+msgstr "Табло"
+
+msgid "Manage Projects"
+msgstr "Управление на проекти"
+
+msgid "Add Project"
+msgstr "Добави проект"
+
+msgid "Edit Project"
+msgstr "Редактирай проект"
+
+msgid "Projects"
+msgstr "Проекти"
+
+msgid "Contact Messages"
+msgstr "Съобщения за контакт"
+
+msgid "Logout"
+msgstr "Изход"

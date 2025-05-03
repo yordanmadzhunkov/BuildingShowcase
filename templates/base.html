@@ -50,6 +50,15 @@
                             <li><a class="dropdown-item {% if session.get('language') == 'bg' %}active{% endif %}" href="{{ url_for('set_language', lang_code='bg') }}">{{ _('Bulgarian') }}</a></li>
                         </ul>
                     </li>
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('admin_dashboard') }}">{{ _('Admin') }}</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('admin_login') }}">{{ _('Admin Login') }}</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
