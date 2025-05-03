@@ -39,14 +39,59 @@ msgstr "Скорошни проекти"
 msgid "View Project"
 msgstr "Разгледай проект"
 
+msgid "View Details"
+msgstr "Преглед на детайли"
+
 msgid "View All Projects"
 msgstr "Всички проекти"
 
 msgid "Building Excellence"
 msgstr "Изграждаме съвършенство"
 
+msgid "Building Excellence for Generations"
+msgstr "Изграждане на съвършенство за поколения"
+
+msgid "At BuildCo Construction, we transform architectural visions into stunning realities. With over 35 years of experience in the construction industry, we bring expertise, innovation, and quality craftsmanship to every project we undertake."
+msgstr "В BuildCo Construction превръщаме архитектурните визии в зашеметяваща реалност. С над 35 години опит в строителната индустрия, ние внасяме експертиза, иновации и качествено майсторство във всеки проект, който предприемаме."
+
+msgid "From commercial high-rises to residential complexes, we're dedicated to delivering projects that exceed expectations while maintaining safety, sustainability, and client satisfaction."
+msgstr "От търговски небостъргачи до жилищни комплекси, ние сме отдадени на изпълнението на проекти, които надминават очакванията, като същевременно поддържаме безопасност, устойчивост и удовлетвореност на клиентите."
+
+msgid "Learn More About Us"
+msgstr "Научете повече за нас"
+
+msgid "Our Expertise"
+msgstr "Нашата експертиза"
+
+msgid "Comprehensive construction services tailored to your needs"
+msgstr "Цялостни строителни услуги, съобразени с вашите нужди"
+
+msgid "Years Experience"
+msgstr "Години Опит"
+
+msgid "Projects Completed"
+msgstr "Завършени проекти"
+
+msgid "Client Satisfaction"
+msgstr "Удовлетвореност на клиентите"
+
+msgid "Team Members"
+msgstr "Членове на екипа"
+
 msgid "Quality Construction Services"
 msgstr "Качествени строителни услуги"
+
+msgid "Ready to Start Your Next Project?"
+msgstr "Готови ли сте да започнете вашия следващ проект?"
+
+msgid "Contact us today for a consultation and let's bring your vision to life."
+msgstr "Свържете се с нас днес за консултация и нека превърнем вашата визия в реалност."
+
+msgid "What Our Clients Say"
+msgstr "Какво казват нашите клиенти"
+
+msgid "Testimonials from satisfied customers"
+msgstr "Отзиви от доволни клиенти"
 
 # Project details
 msgid "Project Details"
