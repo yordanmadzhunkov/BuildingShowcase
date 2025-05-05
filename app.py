@@ -6,9 +6,12 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
 from flask_babel import Babel
 from flask_login import LoginManager
+from flask_wtf.csrf import CSRFProtect
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
+
+csrf = CSRFProtect()
 
 class Base(DeclarativeBase):
     pass
@@ -34,6 +37,9 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # Initialize the app with the extension
 db.init_app(app)
+
+# Initialize the app with the CSRF extension
+csrf.init_app(app)
 
 # Configure Flask-Babel
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
