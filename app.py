@@ -29,11 +29,11 @@ db_url = "sqlite:///buildingco.db"
 # If using PostgreSQL, ensure we use the psycopg2 dialect
 # if db_url.startswith("postgres://"):
 #     db_url = db_url.replace("postgres://", "postgresql://", 1)
-# app.config["SQLALCHEMY_DATABASE_URI"] = db_url
+app.config["SQLALCHEMY_DATABASE_URI"] = db_url
 # app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
-#     "pool_recycle": 300,
-#     "pool_pre_ping": True,
-# }
+#      "pool_recycle": 300,
+#      "pool_pre_ping": True,
+#  }
 # app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # Initialize the app with the extension
