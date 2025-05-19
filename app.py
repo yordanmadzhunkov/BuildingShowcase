@@ -24,16 +24,17 @@ app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "dev-secret-key")
 
 # Configure the database
-db_url = os.environ.get("DATABASE_URL", "sqlite:///buildingco.db")
+db_url = "sqlite:///buildingco.db"
+# db_url = os.environ.get("DATABASE_URL", "sqlite:///buildingco.db")
 # If using PostgreSQL, ensure we use the psycopg2 dialect
-if db_url.startswith("postgres://"):
-    db_url = db_url.replace("postgres://", "postgresql://", 1)
-app.config["SQLALCHEMY_DATABASE_URI"] = db_url
-app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
-    "pool_recycle": 300,
-    "pool_pre_ping": True,
-}
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+# if db_url.startswith("postgres://"):
+#     db_url = db_url.replace("postgres://", "postgresql://", 1)
+# app.config["SQLALCHEMY_DATABASE_URI"] = db_url
+# app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
+#     "pool_recycle": 300,
+#     "pool_pre_ping": True,
+# }
+# app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # Initialize the app with the extension
 db.init_app(app)
@@ -42,7 +43,7 @@ db.init_app(app)
 csrf.init_app(app)
 
 # Configure Flask-Babel
-app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.config['BABEL_DEFAULT_LOCALE'] = 'bg'
 app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'bg']
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'translations'
 
