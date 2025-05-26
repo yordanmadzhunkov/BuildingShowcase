@@ -208,3 +208,89 @@ msgstr "Съобщения за контакт"
 
 msgid "Logout"
 msgstr "Изход"
+
+# Additional About page translations
+msgid "For over 35 years, BuildCo Construction has been a trusted name in the construction industry."
+msgstr "Повече от 35 години BuildCo Construction е доверено име в строителната индустрия."
+
+msgid "Founded in 1989, our company has grown from a small family business to one of the region's most respected construction firms. We've built our reputation on quality craftsmanship, innovative solutions, and unwavering commitment to our clients."
+msgstr "Основана през 1989 г., нашата компания се развива от малък семеен бизнес до една от най-уважаваните строителни фирми в региона. Изградихме репутацията си въз основа на качествено майсторство, иновативни решения и непоколебима отдаденост към нашите клиенти."
+
+msgid "Quality"
+msgstr "Качество"
+
+msgid "We never compromise on the quality of our work."
+msgstr "Никога не правим компромиси с качеството на работата си."
+
+msgid "Safety"
+msgstr "Безопасност"
+
+msgid "Every project is completed with the highest safety standards."
+msgstr "Всеки проект се завършва с най-високи стандарти за безопасност."
+
+msgid "Innovation"
+msgstr "Иновации"
+
+msgid "We embrace new technologies and construction methods."
+msgstr "Приемаме нови технологии и строителни методи."
+
+msgid "Sustainability"
+msgstr "Устойчивост"
+
+msgid "We're committed to environmentally responsible construction."
+msgstr "Отдадени сме на екологично отговорно строителство."
+
+msgid "Client Focus"
+msgstr "Фокус върху клиента"
+
+msgid "Your vision is our priority."
+msgstr "Вашата визия е наш приоритет."
+
+msgid "Our team consists of experienced architects, engineers, project managers, and skilled craftsmen who are passionate about creating exceptional buildings. Each member brings unique expertise and dedication to every project."
+msgstr "Нашият екип се състои от опитни архитекти, инженери, ръководители на проекти и квалифицирани майстори, които са страстни за създаването на изключителни сгради. Всеки член внася уникална експертиза и отдаденост към всеки проект."
+
+msgid "Company Facts"
+msgstr "Факти за компанията"
+
+msgid "Founded"
+msgstr "Основана"
+
+msgid "Projects Completed"
+msgstr "Завършени проекти"
+
+msgid "Excellence in Construction Since 1989"
+msgstr "Съвършенство в строителството от 1989 г."
+
+# Additional contact page translations
+msgid "Explore our portfolio of completed construction projects."
+msgstr "Разгледайте нашето портфолио от завършени строителни проекти."
+
+msgid "Ready to start your next construction project? Contact us today for a consultation."
+msgstr "Готови ли сте да започнете вашия следващ строителен проект? Свържете се с нас днес за консултация."
+
+msgid "Office Address"
+msgstr "Адрес на офиса"
+
+msgid "Phone & Email"
+msgstr "Телефон и имейл"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Email"
+msgstr "Имейл"
+
+msgid "Business Hours"
+msgstr "Работно време"
+
+msgid "Monday - Friday"
+msgstr "Понеделник - Петък"
+
+msgid "Saturday"
+msgstr "Събота"
+
+msgid "Sunday"
+msgstr "Неделя"
+
+msgid "Closed"
+msgstr "Затворено"

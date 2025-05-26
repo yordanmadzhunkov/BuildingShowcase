@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %}Contact Us - BuildCo Construction{% endblock %}
+{% block title %}{{ _('Contact Us - BuildCo Construction') }}{% endblock %}
 
 {% block content %}
 <!-- Contact Header -->
 <section class="py-5 bg-dark text-white text-center">
     <div class="container">
-        <h1 class="display-4 fw-bold">Contact Us</h1>
-        <p class="lead">Get in touch with our team to discuss your construction needs</p>
+        <h1 class="display-4 fw-bold">{{ _('Contact Us') }}</h1>
+        <p class="lead">{{ _('Get in touch with our team to discuss your construction needs') }}</p>
     </div>
 </section>
 
@@ -17,16 +17,16 @@
         <div class="row">
             <div class="col-lg-8 mb-4 mb-lg-0">
                 <div class="contact-form-wrapper p-4 p-md-5 bg-light rounded shadow-sm">
-                    <h2 class="mb-4">Send Us a Message</h2>
-                    
+                    <h2 class="mb-4">{{ _('Send Us a Message') }}</h2>
+
                     <form method="post" action="{{ url_for('contact') }}">
                         {{ form.hidden_tag() }}
-                        
+
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-group mb-3">
                                     {{ form.name.label(class="form-label") }}
-                                    {{ form.name(class="form-control" + (" is-invalid" if form.name.errors else ""), placeholder="Enter your full name") }}
+                                    {{ form.name(class="form-control" + (" is-invalid" if form.name.errors else ""), placeholder=_('Enter your full name')) }}
                                     {% if form.name.errors %}
                                         <div class="invalid-feedback">
                                             {% for error in form.name.errors %}
@@ -36,11 +36,11 @@
                                     {% endif %}
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-6">
                                 <div class="form-group mb-3">
                                     {{ form.email.label(class="form-label") }}
-                                    {{ form.email(class="form-control" + (" is-invalid" if form.email.errors else ""), placeholder="Enter your email address") }}
+                                    {{ form.email(class="form-control" + (" is-invalid" if form.email.errors else ""), placeholder=_('Enter your email address')) }}
                                     {% if form.email.errors %}
                                         <div class="invalid-feedback">
                                             {% for error in form.email.errors %}
@@ -50,11 +50,11 @@
                                     {% endif %}
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-6">
                                 <div class="form-group mb-3">
                                     {{ form.phone.label(class="form-label") }}
-                                    {{ form.phone(class="form-control" + (" is-invalid" if form.phone.errors else ""), placeholder="Enter your phone number (optional)") }}
+                                    {{ form.phone(class="form-control" + (" is-invalid" if form.phone.errors else ""), placeholder=_('Enter your phone number (optional)')) }}
                                     {% if form.phone.errors %}
                                         <div class="invalid-feedback">
                                             {% for error in form.phone.errors %}
@@ -64,11 +64,11 @@
                                     {% endif %}
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-6">
                                 <div class="form-group mb-3">
                                     {{ form.subject.label(class="form-label") }}
-                                    {{ form.subject(class="form-control" + (" is-invalid" if form.subject.errors else ""), placeholder="Enter message subject") }}
+                                    {{ form.subject(class="form-control" + (" is-invalid" if form.subject.errors else ""), placeholder=_('Enter message subject')) }}
                                     {% if form.subject.errors %}
                                         <div class="invalid-feedback">
                                             {% for error in form.subject.errors %}
@@ -78,11 +78,11 @@
                                     {% endif %}
                                 </div>
                             </div>
-                            
+
                             <div class="col-12">
                                 <div class="form-group mb-3">
                                     {{ form.message.label(class="form-label") }}
-                                    {{ form.message(class="form-control" + (" is-invalid" if form.message.errors else ""), rows="6", placeholder="Enter your message") }}
+                                    {{ form.message(class="form-control" + (" is-invalid" if form.message.errors else ""), rows="6", placeholder=_('Enter your message')) }}
                                     {% if form.message.errors %}
                                         <div class="invalid-feedback">
                                             {% for error in form.message.errors %}
@@ -92,7 +92,7 @@
                                     {% endif %}
                                 </div>
                             </div>
-                            
+
                             <div class="col-12">
                                 {{ form.submit(class="btn btn-primary btn-lg") }}
                             </div>
@@ -100,66 +100,66 @@
                     </form>
                 </div>
             </div>
-            
+
             <div class="col-lg-4">
                 <div class="contact-info-wrapper">
                     <div class="card border-0 shadow-sm mb-4">
                         <div class="card-body p-4">
-                            <h3 class="card-title mb-4">Contact Information</h3>
-                            
+                            <h3 class="card-title mb-4">{{ _('Contact Information') }}</h3>
+
                             <div class="contact-item d-flex mb-3">
                                 <div class="contact-icon me-3">
                                     <i class="fas fa-map-marker-alt fa-fw fa-2x text-primary"></i>
                                 </div>
                                 <div class="contact-details">
-                                    <h5 class="mb-1">Address</h5>
+                                    <h5 class="mb-1">{{ _('Address') }}</h5>
                                     <p class="mb-0">
                                         123 Construction Ave, Suite 400<br>
                                         Metropolis, NY 10001
                                     </p>
                                 </div>
                             </div>
-                            
+
                             <div class="contact-item d-flex mb-3">
                                 <div class="contact-icon me-3">
                                     <i class="fas fa-phone fa-fw fa-2x text-primary"></i>
                                 </div>
                                 <div class="contact-details">
-                                    <h5 class="mb-1">Phone</h5>
+                                    <h5 class="mb-1">{{ _('Phone') }}</h5>
                                     <p class="mb-0">+359 876 31 73 38</p>
                                 </div>
                             </div>
-                            
+
                             <div class="contact-item d-flex mb-3">
                                 <div class="contact-icon me-3">
                                     <i class="fas fa-envelope fa-fw fa-2x text-primary"></i>
                                 </div>
                                 <div class="contact-details">
-                                    <h5 class="mb-1">Email</h5>
+                                    <h5 class="mb-1">{{ _('Email') }}</h5>
                                     <p class="mb-0">buildengineering09@gmail.com</p>
                                 </div>
                             </div>
-                            
+
                             <div class="contact-item d-flex">
                                 <div class="contact-icon me-3">
                                     <i class="fas fa-clock fa-fw fa-2x text-primary"></i>
                                 </div>
                                 <div class="contact-details">
-                                    <h5 class="mb-1">Office Hours</h5>
+                                    <h5 class="mb-1">{{ _('Office Hours') }}</h5>
                                     <p class="mb-0">
-                                        Monday - Friday: 8:00 AM - 6:00 PM<br>
-                                        Saturday: 9:00 AM - 1:00 PM<br>
-                                        Sunday: Closed
+                                        {{ _('Monday - Friday') }}: 8:00 AM - 6:00 PM<br>
+                                        {{ _('Saturday') }}: 9:00 AM - 1:00 PM<br>
+                                        {{ _('Sunday') }}: {{ _('Closed') }}
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="card border-0 shadow-sm">
                         <div class="card-body p-4">
-                            <h3 class="card-title mb-4">Connect With Us</h3>
-                            
+                            <h3 class="card-title mb-4">{{ _('Connect With Us') }}</h3>
+
                             <div class="social-links d-flex flex-wrap">
                                 <a href="https://www.facebook.com/BUILDENGINEERING/" class="btn btn-outline-primary me-2 mb-2">
                                     <i class="fab fa-facebook-f me-2"></i> Facebook
@@ -185,7 +185,7 @@
 <!-- Map Section -->
 <section class="py-5 bg-light">
     <div class="container">
-        <h2 class="mb-4 text-center">Find Us</h2>
+        <h2 class="mb-4 text-center">{{ _('Find Us') }}</h2>
         <div class="ratio ratio-21x9 shadow rounded">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976397304903!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1643800372403!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
         </div>
@@ -196,74 +196,74 @@
 <section class="py-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold">Frequently Asked Questions</h2>
-            <p class="lead">Find answers to common questions about our construction services</p>
+            <h2 class="display-5 fw-bold">{{ _('Frequently Asked Questions') }}</h2>
+            <p class="lead">{{ _('Find answers to common questions about our construction services') }}</p>
         </div>
-        
+
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="accordion" id="faqAccordion">
                     <div class="accordion-item mb-3 border rounded shadow-sm">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                What types of construction projects does BuildCo handle?
+                                {{ _('What types of construction projects does BuildCo handle?') }}
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                BuildCo handles a wide range of construction projects, including commercial buildings, residential developments, healthcare facilities, educational institutions, industrial complexes, and infrastructure projects. Our experienced team can manage projects of various sizes and complexities.
+                                {{ _('BuildCo handles a wide range of construction projects, including commercial buildings, residential developments, healthcare facilities, educational institutions, industrial complexes, and infrastructure projects. Our experienced team can manage projects of various sizes and complexities.') }}
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="accordion-item mb-3 border rounded shadow-sm">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                How do I get a quote for my construction project?
+                                {{ _('How do I get a quote for my construction project?') }}
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                To get a quote for your construction project, you can contact us through our contact form, phone, or email. We'll schedule an initial consultation to discuss your project requirements, after which our team will prepare a detailed proposal including cost estimates, timelines, and project specifications.
+                                {{ _("To get a quote for your construction project, you can contact us through our contact form, phone, or email. We'll schedule an initial consultation to discuss your project requirements, after which our team will prepare a detailed proposal including cost estimates, timelines, and project specifications.") }}
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="accordion-item mb-3 border rounded shadow-sm">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                What is BuildCo's approach to sustainable construction?
+                                {{ _("What is BuildCo's approach to sustainable construction?") }}
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                BuildCo is committed to sustainable construction practices. We incorporate energy-efficient designs, utilize environmentally friendly materials, implement waste reduction strategies, and follow green building standards. Our team is knowledgeable about LEED certification requirements and can help clients achieve their sustainability goals.
+                                {{ _("BuildCo is committed to sustainable construction practices. We incorporate energy-efficient designs, utilize environmentally friendly materials, implement waste reduction strategies, and follow green building standards. Our team is knowledgeable about LEED certification requirements and can help clients achieve their sustainability goals.") }}
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="accordion-item mb-3 border rounded shadow-sm">
                         <h2 class="accordion-header" id="headingFour">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                How does BuildCo ensure quality control during construction?
+                                {{ _('How does BuildCo ensure quality control during construction?') }}
                             </button>
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Quality control is integral to our construction process. We have dedicated quality control managers who conduct regular inspections throughout the project lifecycle. We follow industry standards and best practices, utilize quality materials, employ skilled craftsmen, and maintain rigorous testing and verification procedures to ensure exceptional quality in all our construction projects.
+                                {{ _('Quality control is integral to our construction process. We have dedicated quality control managers who conduct regular inspections throughout the project lifecycle. We follow industry standards and best practices, utilize quality materials, employ skilled craftsmen, and maintain rigorous testing and verification procedures to ensure exceptional quality in all our construction projects.') }}
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="accordion-item border rounded shadow-sm">
                         <h2 class="accordion-header" id="headingFive">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                What warranties does BuildCo offer on completed projects?
+                                {{ _('What warranties does BuildCo offer on completed projects?') }}
                             </button>
                         </h2>
                         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                BuildCo offers comprehensive warranties on all our completed projects. Typically, we provide a one-year warranty on workmanship and materials. Additionally, we pass through manufacturers' warranties for installed equipment and systems, which may extend beyond our standard warranty period. Our client support team remains available to address any warranty issues promptly.
+                                {{ _("BuildCo offers comprehensive warranties on all our completed projects. Typically, we provide a one-year warranty on workmanship and materials. Additionally, we pass through manufacturers' warranties for installed equipment and systems, which may extend beyond our standard warranty period. Our client support team remains available to address any warranty issues promptly.") }}
                             </div>
                         </div>
                     </div>
@@ -278,11 +278,11 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8 mb-4 mb-lg-0">
-                <h2 class="display-5 fw-bold">Ready to Start Your Construction Project?</h2>
-                <p class="lead mb-0">Let's discuss how BuildCo can bring your vision to life.</p>
+                <h2 class="display-5 fw-bold">{{ _('Ready to Start Your Construction Project?') }}</h2>
+                <p class="lead mb-0">{{ _("Let's discuss how BuildCo can bring your vision to life.") }}</p>
             </div>
             <div class="col-lg-4 text-lg-end">
-                <a href="#" class="btn btn-light btn-lg" onclick="document.querySelector('form').scrollIntoView({behavior: 'smooth'}); return false;">Contact Us Now</a>
+                <a href="#" class="btn btn-light btn-lg" onclick="document.querySelector('form').scrollIntoView({behavior: 'smooth'}); return false;">{{ _('Contact Us Now') }}</a>
             </div>
         </div>
     </div>

@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %}About Us - BuildCo Construction{% endblock %}
+{% block title %}{% endblock %}
 
 {% block content %}
 <!-- About Header -->
 <section class="py-5 bg-dark text-white text-center">
     <div class="container">
-        <h1 class="display-4 fw-bold">About BuildCo</h1>
-        <p class="lead">Building excellence since 1985</p>
+        <h1 class="display-4 fw-bold">{{ _('About BuildCo') }}</h1>
+        <p class="lead">{{ _('Building excellence since 1985') }}</p>
     </div>
 </section>
 
@@ -19,10 +19,10 @@
                 <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="BuildCo Construction Team" class="img-fluid rounded shadow">
             </div>
             <div class="col-lg-6">
-                <h2 class="display-5 fw-bold mb-4">Our Story</h2>
-                <p class="lead">Since its inception, the company has carried out more than 5000 sq.m of total built-up area of complete construction of buildings and renovation of multi-family residential buildings under the National Energy Efficiency Program with a total built-up area of over 100,000 sq.m. </p>
-                <p>Our construction groups and mechanization are composed of highly qualified personnel in all areas: plumbing, electrical, civil engineers, TVET, technical managers with many years of experience and professional workers. The company has over 50 employees and professional mechanization and equipment to perform any type of assigned work in the fastest possible time and with high quality.</p>
-                <p>We have certificates for various types of construction works and repairs: ISO 9001:2015, ISO 14001:2015, OHSAS 18001:2007. There are also certificates issued by the Central Professional Register of Builders for groups first, third, fourth and fifth, constructions from 3rd to 5th category.</p> 
+                <h2 class="display-5 fw-bold mb-4">{{ _('Our Story') }}</h2>
+                <p class="lead">{{ _('Since its inception, the company has carried out more than 5000 sq.m of total built-up area of complete construction of buildings and renovation of multi-family residential buildings under the National Energy Efficiency Program with a total built-up area of over 100,000 sq.m.') }}</p>
+                <p>{{ _('Our construction groups and mechanization are composed of highly qualified personnel in all areas: plumbing, electrical, civil engineers, TVET, technical managers with many years of experience and professional workers. The company has over 50 employees and professional mechanization and equipment to perform any type of assigned work in the fastest possible time and with high quality.') }}</p>
+                <p>{{ _('We have certificates for various types of construction works and repairs: ISO 9001:2015, ISO 14001:2015, OHSAS 18001:2007. There are also certificates issued by the Central Professional Register of Builders for groups first, third, fourth and fifth, constructions from 3rd to 5th category.') }}</p> 
             </div>
         </div>
     </div>
@@ -38,9 +38,9 @@
                         <div class="text-center mb-3">
                             <i class="fas fa-bullseye fa-3x text-primary"></i>
                         </div>
-                        <h3 class="card-title text-center mb-4">Our Mission</h3>
-                        <p class="card-text">To deliver exceptional construction services that exceed client expectations through innovation, quality craftsmanship, and sustainable building practices.</p>
-                        <p class="card-text">We are committed to maintaining the highest standards of safety, integrity, and professionalism in every project we undertake, while fostering long-term relationships with our clients, partners, and communities.</p>
+                        <h3 class="card-title text-center mb-4">{{ _('Our Mission') }}</h3>
+                        <p class="card-text">{{ _('To deliver exceptional construction services that exceed client expectations through innovation, quality craftsmanship, and sustainable building practices.') }}</p>
+                        <p class="card-text">{{ _('We are committed to maintaining the highest standards of safety, integrity, and professionalism in every project we undertake, while fostering long-term relationships with our clients, partners, and communities.') }}</p>
                     </div>
                 </div>
             </div>
@@ -50,9 +50,9 @@
                         <div class="text-center mb-3">
                             <i class="fas fa-eye fa-3x text-primary"></i>
                         </div>
-                        <h3 class="card-title text-center mb-4">Our Vision</h3>
-                        <p class="card-text">To be the leading construction company known for transforming architectural visions into exceptional built environments that enhance communities and exceed client expectations.</p>
-                        <p class="card-text">We aspire to set new standards in the construction industry through innovative practices, sustainable solutions, and a relentless pursuit of excellence in everything we do.</p>
+                        <h3 class="card-title text-center mb-4">{{ _('Our Vision') }}</h3>
+                        <p class="card-text">{{ _('To be the leading construction company known for transforming architectural visions into exceptional built environments that enhance communities and exceed client expectations.') }}</p>
+                        <p class="card-text">{{ _('We aspire to set new standards in the construction industry through innovative practices, sustainable solutions, and a relentless pursuit of excellence in everything we do.') }}</p>
                     </div>
                 </div>
             </div>
@@ -64,10 +64,10 @@
 <section class="py-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold">Our Leadership Team</h2>
-            <p class="lead">Meet the experienced professionals who lead BuildCo Construction</p>
+            <h2 class="display-5 fw-bold">{{ _('Our Leadership Team') }}</h2>
+            <p class="lead">{{ _('Meet the experienced professionals who lead BuildCo Construction') }}</p>
         </div>
-        
+
         <div class="row g-4">
             <div class="col-md-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm text-center team-card">
@@ -75,9 +75,9 @@
                         <div class="team-member-img mb-3">
                             <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Robert BuildCo" class="img-fluid rounded-circle">
                         </div>
-                        <h4 class="card-title">Robert BuildCo</h4>
-                        <p class="text-muted">Chief Executive Officer</p>
-                        <p class="card-text">With over 30 years of construction experience, Robert leads the company with a vision for innovation and excellence.</p>
+                        <h4 class="card-title">{{ _('Robert BuildCo') }}</h4>
+                        <p class="text-muted">{{ _('Chief Executive Officer') }}</p>
+                        <p class="card-text">{{ _('With over 30 years of construction experience, Robert leads the company with a vision for innovation and excellence.') }}</p>
                         <div class="social-icons mt-3">
                             <a href="#" class="text-decoration-none me-2"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#" class="text-decoration-none"><i class="fas fa-envelope"></i></a>
@@ -85,16 +85,16 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm text-center team-card">
                     <div class="card-body p-4">
                         <div class="team-member-img mb-3">
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Sarah Johnson" class="img-fluid rounded-circle">
                         </div>
-                        <h4 class="card-title">Sarah Johnson</h4>
-                        <p class="text-muted">Chief Operations Officer</p>
-                        <p class="card-text">Sarah ensures operational excellence across all projects and maintains BuildCo's high standards of quality.</p>
+                        <h4 class="card-title">{{ _('Sarah Johnson') }}</h4>
+                        <p class="text-muted">{{ _('Chief Operations Officer') }}</p>
+                        <p class="card-text">{{ _('Sarah ensures operational excellence across all projects and maintains BuildCo\'s high standards of quality.') }}</p>
                         <div class="social-icons mt-3">
                             <a href="#" class="text-decoration-none me-2"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#" class="text-decoration-none"><i class="fas fa-envelope"></i></a>
@@ -102,16 +102,16 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm text-center team-card">
                     <div class="card-body p-4">
                         <div class="team-member-img mb-3">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="David Martinez" class="img-fluid rounded-circle">
                         </div>
-                        <h4 class="card-title">David Martinez</h4>
-                        <p class="text-muted">Chief Construction Officer</p>
-                        <p class="card-text">David brings 25 years of hands-on construction experience and technical expertise to every project.</p>
+                        <h4 class="card-title">{{ _('David Martinez') }}</h4>
+                        <p class="text-muted">{{ _('Chief Construction Officer') }}</p>
+                        <p class="card-text">{{ _('David brings 25 years of hands-on construction experience and technical expertise to every project.') }}</p>
                         <div class="social-icons mt-3">
                             <a href="#" class="text-decoration-none me-2"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#" class="text-decoration-none"><i class="fas fa-envelope"></i></a>
@@ -119,16 +119,16 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm text-center team-card">
                     <div class="card-body p-4">
                         <div class="team-member-img mb-3">
                             <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Jennifer Chen" class="img-fluid rounded-circle">
                         </div>
-                        <h4 class="card-title">Jennifer Chen</h4>
-                        <p class="text-muted">Director of Architecture</p>
-                        <p class="card-text">Jennifer leads our architectural team, bringing innovative design solutions to every construction project.</p>
+                        <h4 class="card-title">{{ _('Jennifer Chen') }}</h4>
+                        <p class="text-muted">{{ _('Director of Architecture') }}</p>
+                        <p class="card-text">{{ _('Jennifer leads our architectural team, bringing innovative design solutions to every construction project.') }}</p>
                         <div class="social-icons mt-3">
                             <a href="#" class="text-decoration-none me-2"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#" class="text-decoration-none"><i class="fas fa-envelope"></i></a>
@@ -144,10 +144,10 @@
 <section class="py-5 bg-light">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold">Our Core Values</h2>
-            <p class="lead">The principles that guide everything we do</p>
+            <h2 class="display-5 fw-bold">{{ _('Our Core Values') }}</h2>
+            <p class="lead">{{ _('The principles that guide everything we do') }}</p>
         </div>
-        
+
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm">
@@ -155,68 +155,68 @@
                         <div class="value-icon mb-3">
                             <i class="fas fa-medal fa-3x text-primary"></i>
                         </div>
-                        <h4 class="card-title">Excellence</h4>
-                        <p class="card-text">We're committed to delivering excellence in every aspect of our work, from initial planning to final construction.</p>
+                        <h4 class="card-title">{{ _('Excellence') }}</h4>
+                        <p class="card-text">{{ _('We\'re committed to delivering excellence in every aspect of our work, from initial planning to final construction.') }}</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body p-4 text-center">
                         <div class="value-icon mb-3">
                             <i class="fas fa-handshake fa-3x text-primary"></i>
                         </div>
-                        <h4 class="card-title">Integrity</h4>
-                        <p class="card-text">We conduct business with honesty, transparency, and ethical practices that build trust with our clients and partners.</p>
+                        <h4 class="card-title">{{ _('Integrity') }}</h4>
+                        <p class="card-text">{{ _('We conduct business with honesty, transparency, and ethical practices that build trust with our clients and partners.') }}</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body p-4 text-center">
                         <div class="value-icon mb-3">
                             <i class="fas fa-lightbulb fa-3x text-primary"></i>
                         </div>
-                        <h4 class="card-title">Innovation</h4>
-                        <p class="card-text">We embrace innovative technologies and methods to deliver cutting-edge construction solutions.</p>
+                        <h4 class="card-title">{{ _('Innovation') }}</h4>
+                        <p class="card-text">{{ _('We embrace innovative technologies and methods to deliver cutting-edge construction solutions.') }}</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body p-4 text-center">
                         <div class="value-icon mb-3">
                             <i class="fas fa-users fa-3x text-primary"></i>
                         </div>
-                        <h4 class="card-title">Teamwork</h4>
-                        <p class="card-text">We foster collaboration among our team members, clients, and partners to achieve the best possible outcomes.</p>
+                        <h4 class="card-title">{{ _('Teamwork') }}</h4>
+                        <p class="card-text">{{ _('We foster collaboration among our team members, clients, and partners to achieve the best possible outcomes.') }}</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body p-4 text-center">
                         <div class="value-icon mb-3">
                             <i class="fas fa-hard-hat fa-3x text-primary"></i>
                         </div>
-                        <h4 class="card-title">Safety</h4>
-                        <p class="card-text">We prioritize safety on all our construction sites and maintain rigorous safety standards across all operations.</p>
+                        <h4 class="card-title">{{ _('Safety') }}</h4>
+                        <p class="card-text">{{ _('We prioritize safety on all our construction sites and maintain rigorous safety standards across all operations.') }}</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body p-4 text-center">
                         <div class="value-icon mb-3">
                             <i class="fas fa-leaf fa-3x text-primary"></i>
                         </div>
-                        <h4 class="card-title">Sustainability</h4>
-                        <p class="card-text">We're committed to environmentally responsible construction practices and sustainable building solutions.</p>
+                        <h4 class="card-title">{{ _('Sustainability') }}</h4>
+                        <p class="card-text">{{ _('We\'re committed to environmentally responsible construction practices and sustainable building solutions.') }}</p>
                     </div>
                 </div>
             </div>
@@ -228,10 +228,10 @@
 <section class="py-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold">Our Construction Process</h2>
-            <p class="lead">A systematic approach to bringing your vision to life</p>
+            <h2 class="display-5 fw-bold">{{ _('Our Construction Process') }}</h2>
+            <p class="lead">{{ _('A systematic approach to bringing your vision to life') }}</p>
         </div>
-        
+
         <div class="row">
             <div class="col-lg-10 mx-auto">
                 <div class="timeline">
@@ -239,68 +239,68 @@
                         <div class="timeline-number">1</div>
                         <div class="card border-0 shadow-sm">
                             <div class="card-body">
-                                <h4 class="card-title">Initial Consultation</h4>
-                                <p class="card-text">We begin by understanding your vision, requirements, and budget constraints through detailed discussions and site visits.</p>
+                                <h4 class="card-title">{{ _('Initial Consultation') }}</h4>
+                                <p class="card-text">{{ _('We begin by understanding your vision, requirements, and budget constraints through detailed discussions and site visits.') }}</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="timeline-item">
                         <div class="timeline-number">2</div>
                         <div class="card border-0 shadow-sm">
                             <div class="card-body">
-                                <h4 class="card-title">Design Development</h4>
-                                <p class="card-text">Our architects and engineers develop comprehensive designs and plans that align with your vision and comply with all building codes.</p>
+                                <h4 class="card-title">{{ _('Design Development') }}</h4>
+                                <p class="card-text">{{ _('Our architects and engineers develop comprehensive designs and plans that align with your vision and comply with all building codes.') }}</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="timeline-item">
                         <div class="timeline-number">3</div>
                         <div class="card border-0 shadow-sm">
                             <div class="card-body">
-                                <h4 class="card-title">Preconstruction Planning</h4>
-                                <p class="card-text">We create detailed construction plans, schedules, and budgets to ensure efficient execution and minimize potential issues.</p>
+                                <h4 class="card-title">{{ _('Preconstruction Planning') }}</h4>
+                                <p class="card-text">{{ _('We create detailed construction plans, schedules, and budgets to ensure efficient execution and minimize potential issues.') }}</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="timeline-item">
                         <div class="timeline-number">4</div>
                         <div class="card border-0 shadow-sm">
                             <div class="card-body">
-                                <h4 class="card-title">Construction Execution</h4>
-                                <p class="card-text">Our skilled teams execute the construction phase with precision, adhering to quality standards and safety protocols.</p>
+                                <h4 class="card-title">{{ _('Construction Execution') }}</h4>
+                                <p class="card-text">{{ _('Our skilled teams execute the construction phase with precision, adhering to quality standards and safety protocols.') }}</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="timeline-item">
                         <div class="timeline-number">5</div>
                         <div class="card border-0 shadow-sm">
                             <div class="card-body">
-                                <h4 class="card-title">Quality Control</h4>
-                                <p class="card-text">Rigorous quality control measures are implemented throughout the construction process to ensure exceptional results.</p>
+                                <h4 class="card-title">{{ _('Quality Control') }}</h4>
+                                <p class="card-text">{{ _('Rigorous quality control measures are implemented throughout the construction process to ensure exceptional results.') }}</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="timeline-item">
                         <div class="timeline-number">6</div>
                         <div class="card border-0 shadow-sm">
                             <div class="card-body">
-                                <h4 class="card-title">Project Completion</h4>
-                                <p class="card-text">We finalize all aspects of the project, conduct thorough inspections, and prepare for the handover process.</p>
+                                <h4 class="card-title">{{ _('Project Completion') }}</h4>
+                                <p class="card-text">{{ _('We finalize all aspects of the project, conduct thorough inspections, and prepare for the handover process.') }}</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="timeline-item">
                         <div class="timeline-number">7</div>
                         <div class="card border-0 shadow-sm">
                             <div class="card-body">
-                                <h4 class="card-title">Client Support</h4>
-                                <p class="card-text">Our relationship continues after completion with warranty support and maintenance services to ensure long-term satisfaction.</p>
+                                <h4 class="card-title">{{ _('Client Support') }}</h4>
+                                <p class="card-text">{{ _('Our relationship continues after completion with warranty support and maintenance services to ensure long-term satisfaction.') }}</p>
                             </div>
                         </div>
                     </div>
@@ -314,10 +314,10 @@
 <section class="py-5 bg-light">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold">Our Clients & Partners</h2>
-            <p class="lead">Trusted by leading organizations across industries</p>
+            <h2 class="display-5 fw-bold">{{ _('Our Clients & Partners') }}</h2>
+            <p class="lead">{{ _('Trusted by leading organizations across industries') }}</p>
         </div>
-        
+
         <div class="row g-4 align-items-center">
             <div class="col-md-3 col-6 text-center">
                 <div class="client-logo p-3">
@@ -368,11 +368,11 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8 mb-4 mb-lg-0">
-                <h2 class="display-5 fw-bold">Ready to Work With Us?</h2>
-                <p class="lead mb-0">Contact our team to discuss your construction project needs.</p>
+                <h2 class="display-5 fw-bold">{{ _('Ready to Work With Us?') }}</h2>
+                <p class="lead mb-0">{{ _('Contact our team to discuss your construction project needs.') }}</p>
             </div>
             <div class="col-lg-4 text-lg-end">
-                <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Get in Touch</a>
+                <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">{{ _('Get in Touch') }}</a>
             </div>
         </div>
     </div>
