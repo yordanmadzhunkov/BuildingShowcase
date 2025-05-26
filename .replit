@@ -1,12 +1,15 @@
-modules = ["python-3.11", "postgresql-16"]
+modules = ["web", "python-3.11", "nodejs-20"]
+compile = "make"
+run = "python main.py"
 
 [nix]
 channel = "stable-24_05"
-packages = ["openssl", "postgresql"]
+packages = ["openssl", "postgresql", "docker"]
 
 [deployment]
 deploymentTarget = "autoscale"
-run = ["gunicorn", "--bind", "0.0.0.0:5000", "main:app"]
+run = ["sh", "-c", "python main.py"]
+build = ["sh", "-c", "make"]
 
 [workflows]
 runButton = "Project"
