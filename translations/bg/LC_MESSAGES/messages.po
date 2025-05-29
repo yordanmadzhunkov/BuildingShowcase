@@ -51,8 +51,8 @@ msgstr "Изграждаме съвършенство"
 msgid "Building Excellence for Generations"
 msgstr "Изграждане на съвършенство за поколения"
 
-msgid "At BuildCo Construction, we transform architectural visions into stunning realities. With over 35 years of experience in the construction industry, we bring expertise, innovation, and quality craftsmanship to every project we undertake."
-msgstr "В BuildCo Construction превръщаме архитектурните визии в зашеметяваща реалност. С над 35 години опит в строителната индустрия, ние внасяме експертиза, иновации и качествено майсторство във всеки проект, който предприемаме."
+msgid "At Build Engineering 09, we transform architectural visions into stunning realities. With over 35 years of experience in the construction industry, we bring expertise, innovation, and quality craftsmanship to every project we undertake."
+msgstr "В Build Engineering 09 трансформираме архитектурните визии в зашеметяващи реалности. С над 35 години опит в строителната индустрия, ние внасяме експертиза, иновации и качествено майсторство във всеки проект, който предприемаме."
 
 msgid "From commercial high-rises to residential complexes, we're dedicated to delivering projects that exceed expectations while maintaining safety, sustainability, and client satisfaction."
 msgstr "От търговски небостъргачи до жилищни комплекси, ние сме отдадени на изпълнението на проекти, които надминават очакванията, като същевременно поддържаме безопасност, устойчивост и удовлетвореност на клиентите."
@@ -210,8 +210,8 @@ msgid "Logout"
 msgstr "Изход"
 
 # Additional About page translations
-msgid "For over 35 years, BuildCo Construction has been a trusted name in the construction industry."
-msgstr "Повече от 35 години BuildCo Construction е доверено име в строителната индустрия."
+msgid "For over 35 years, Build Engineering 09 has been a trusted name in the construction industry."
+msgstr "Повече от 35 години Build Engineering 09 е доверено име в строителната индустрия."
 
 msgid "Founded in 1989, our company has grown from a small family business to one of the region's most respected construction firms. We've built our reputation on quality craftsmanship, innovative solutions, and unwavering commitment to our clients."
 msgstr "Основана през 1989 г., нашата компания се развива от малък семеен бизнес до една от най-уважаваните строителни фирми в региона. Изградихме репутацията си въз основа на качествено майсторство, иновативни решения и непоколебима отдаденост към нашите клиенти."
@@ -319,3 +319,30 @@ msgstr "Неделя"
 
 msgid "Closed"
 msgstr "Затворено"
+
+msgid "About Build Engineering 09"
+msgstr "За Build Engineering 09"
+
+msgid "Meet the experienced professionals who lead Build Engineering 09"
+msgstr "Запознайте се с опитните професионалисти, които ръководят Build Engineering 09"
+
+msgid "Robert Engineer"
+msgstr "Робърт Инженер"
+
+msgid "Sarah ensures operational excellence across all projects and maintains Build Engineering 09's high standards of quality."
+msgstr "Сара осигурява операционно съвършенство във всички проекти и поддържа високите стандарти за качество на Build Engineering 09."
+
+msgid "What types of construction projects does Build Engineering 09 handle?"
+msgstr "Какви типове строителни проекти обработва Build Engineering 09?"
+
+msgid "Build Engineering 09 handles a wide range of construction projects, including commercial buildings, residential developments, healthcare facilities, educational institutions, industrial complexes, and infrastructure projects. Our experienced team can manage projects of various sizes and complexities."
+msgstr "Build Engineering 09 обработва широк спектър от строителни проекти, включително търговски сгради, жилищни комплекси, здравни заведения, образователни институции, промишлени комплекси и инфраструктурни проекти. Нашият опитен екип може да управлява проекти с различни размери и сложност."
+
+msgid "Build Engineering 09 is committed to sustainable construction practices. We incorporate energy-efficient designs, utilize environmentally friendly materials, implement waste reduction strategies, and follow green building standards. Our team is knowledgeable about LEED certification requirements and can help clients achieve their sustainability goals."
+msgstr "Build Engineering 09 е ангажирана с устойчиви строителни практики. Ние включваме енергийно ефективни дизайни, използваме екологично чисти материали, прилагаме стратегии за намаляване на отпадъците и следваме стандартите за зелено строителство. Нашият екип е запознат с изискванията за LEED сертификация и може да помогне на клиентите да постигнат своите цели за устойчивост."
+
+msgid "Build Engineering 09 offers comprehensive warranties on all our completed projects. Typically, we provide a one-year warranty on workmanship and materials. Additionally, we pass through manufacturers' warranties for installed equipment and systems, which may extend beyond our standard warranty period. Our client support team remains available to address any warranty issues promptly."
+msgstr "Build Engineering 09 предлага изчерпателни гаранции за всички наши завършени проекти. Обикновено предоставяме едногодишна гаранция за изработката и материалите. Освен това предаваме гаранциите на производителите за инсталирано оборудване и системи, които могат да се простират извън нашия стандартен гаранционен период. Нашият екип за клиентска поддръжка остава на разположение, за да решава незабавно всички гаранционни проблеми."
+
+msgid "Let's discuss how Build Engineering 09 can bring your vision to life."
+msgstr "Нека обсъдим как Build Engineering 09 може да превърне вашата визия в реалност."
