@@ -261,6 +261,31 @@ msgstr "Завършени проекти"
 msgid "Excellence in Construction Since 1989"
 msgstr "Съвършенство в строителството от 1989 г."
 
+# Service sections translations
+msgid "Commercial Buildings"
+msgstr "Търговски сгради"
+
+msgid "Office complexes, retail centers, and industrial facilities built to the highest standards of quality and efficiency."
+msgstr "Офис комплекси, търговски центрове и промишлени съоръжения, построени според най-високите стандарти за качество и ефективност."
+
+msgid "Residential Projects"
+msgstr "Жилищни проекти"
+
+msgid "Luxury apartment complexes, multi-family housing, and custom residential developments designed for modern living."
+msgstr "Луксозни жилищни комплекси, многофамилни жилища и персонализирани жилищни проекти, проектирани за модерен живот."
+
+msgid "Educational Institutions"
+msgstr "Образователни институции"
+
+msgid "Schools, universities, and research facilities built to inspire learning and advance education."
+msgstr "Училища, университети и изследователски съоръжения, построени да вдъхновяват ученето и да развиват образованието."
+
+msgid "Sustainable Building"
+msgstr "Устойчиво строителство"
+
+msgid "Green building initiatives and sustainable construction practices that minimize environmental impact."
+msgstr "Инициативи за зелено строителство и устойчиви строителни практики, които минимизират въздействието върху околната среда."
+
 # Additional contact page translations
 msgid "Explore our portfolio of completed construction projects."
 msgstr "Разгледайте нашето портфолио от завършени строителни проекти."
